@@ -1,0 +1,46 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "dc_locations_search"
+version = "0.0.1"
+description = "Gather reference articles about data centers and extract structured attributes with an LLM"
+authors = [
+  { name = "LBNL" },
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+requires-python = "~=3.12.0"
+dependencies = [
+    "openai",
+    "tavily-python",
+    "requests",
+    "pandas",
+    "pyarrow",
+    "openpyxl",
+    "typer",
+    "loguru",
+    "python-dotenv",
+    "tqdm",
+    # lbl_data_center_map provides the canonical inventory schema/enums. It is
+    # NOT on PyPI; install it editable from the local checkout:
+    #   pip install -e /home/afhubbard/lbl-data-center-map
+]
+
+[project.scripts]
+dc-locations-search = "dc_locations_search.cli:app"
+
+[tool.ruff]
+line-length = 99
+src = ["dc_locations_search"]
+include = ["pyproject.toml", "dc_locations_search/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["dc_locations_search"]
+force-sort-within-sections = true

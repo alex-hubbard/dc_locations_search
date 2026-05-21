@@ -1,0 +1,19 @@
+{
+  "operator": {"value": "QTS Realty Trust", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "company": null,
+  "status": {"value": "operational", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "capacity_mw": {"value": 72, "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "capacity_basis": {"value": "it_load", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "it_load_mw": {"value": 72, "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "cooling_type": {"value": "air_cooled", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "cooling_technology": {"value": "chilled-water air cooling", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "pue": {"value": 1.3, "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "medium"},
+  "pue_basis": {"value": "design", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "square_footage": {"value": 990000, "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "power_source": {"value": "Georgia Power", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "backup_power": {"value": "diesel backup generators", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "power_redundancy": {"value": "N+1", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "high"},
+  "dc_type": {"value": "hyperscale", "source_url": "https://www.datacenterdynamics.com/example-qts-atlanta", "confidence": "medium"},
+  "overall_confidence": "high",
+  "extraction_notes": null
+}

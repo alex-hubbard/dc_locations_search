@@ -1,0 +1,13 @@
+openai
+tavily-python
+requests
+pandas
+pyarrow
+openpyxl
+typer
+loguru
+python-dotenv
+tqdm
+# Canonical inventory schema (not on PyPI). Install editable from local checkout:
+#   pip install -e /home/afhubbard/lbl-data-center-map
+-e /home/afhubbard/lbl-data-center-map

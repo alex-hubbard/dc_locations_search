@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "url": "https://www.datacenterdynamics.com/example-qts-atlanta",
+      "title": "QTS expands Atlanta-Metro data center",
+      "content": "short snippet",
+      "raw_content": "QTS Atlanta-Metro is a hyperscale data center in Atlanta, Georgia operated by QTS Realty Trust. The facility provides 72 MW of IT load and uses chilled-water air cooling with a design PUE of 1.3. The campus spans 990,000 square feet and is fully operational. Power is supplied by Georgia Power with N+1 redundancy and diesel backup generators."
+    },
+    {
+      "url": "https://www.datacenterfrontier.com/example-qts",
+      "title": "Inside the QTS Atlanta campus",
+      "content": "another snippet",
+      "raw_content": "The QTS Atlanta-Metro site was originally a Sun Microsystems chip plant. It has been operational for over a decade and serves wholesale colocation customers."
+    },
+    {
+      "url": "https://www.reddit.com/r/datacenter/comments/spam",
+      "title": "forum chatter",
+      "content": "ignore me",
+      "raw_content": "random forum content that should be filtered out by the deny list"
+    }
+  ]
+}
