@@ -28,14 +28,19 @@ PROCESSING_LOG_PATH = INTERIM_DATA_DIR / "processing_log.jsonl"
 
 # --- LLM (CBORG, OpenAI-compatible) ---
 CBORG_BASE_URL = "https://api.cborg.lbl.gov"
-# Primary extraction model: 1M context, ~$0.10/1M input tokens.
-LLM_MODEL = os.getenv("LLM_MODEL", "gemini-2.0-flash-lite")
+# Primary extraction model. gemma-4 (non-thinking) extracts the full field set
+# in ~25-80s/DC with high-confidence results; the *-thinking variants time out
+# on this workload. Override via env (e.g. LLM_MODEL=gemini-2.0-flash-lite for
+# the cheapest/fastest option).
+LLM_MODEL = os.getenv("LLM_MODEL", "gemma-4")
 # Fallback for documents that exceed the primary model's context window.
-LLM_LARGE_MODEL = os.getenv("LLM_LARGE_MODEL", "gemini-2.0-flash-lite")
+LLM_LARGE_MODEL = os.getenv("LLM_LARGE_MODEL", "gemma-4")
 LLM_MAX_WORKERS = int(os.getenv("LLM_MAX_WORKERS", "4"))
 LLM_MAX_OUTPUT_TOKENS = 32768
 LLM_TEMPERATURE = 0.1
-LLM_TIMEOUT_SECONDS = 60
+# Per-call timeout. gemma-4 needs more than 60s on the full prompt; thinking
+# models need minutes (not recommended). Override via env for slower models.
+LLM_TIMEOUT_SECONDS = int(os.getenv("LLM_TIMEOUT_SECONDS", "180"))
 
 # Retry / backoff (matches permit_data_extraction).
 LLM_MAX_RETRIES = 5
